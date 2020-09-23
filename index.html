@@ -2,6 +2,7 @@
 <html>
 <title>W3.CSS Template</title>
 <meta charset="UTF-8">
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -39,6 +40,12 @@ body, html {
   background-image: url("/w3images/parallax3.jpg");
   min-height: 400px;
 }
+
+/* form styling for web-to-lead) */
+.web-to-lead {
+    display: flex;
+    flex-direction:column;
+  }
 
 .w3-wide {letter-spacing: 10px;}
 .w3-hover-opacity {cursor: pointer;}
@@ -80,13 +87,25 @@ body, html {
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">SIGN UP <span class="w3-hide-small">FOR OUR</span> EMAILS</span>
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">SIGN UP <span class="w3-hide-small">FOR OUR</span> EMAILS BELOW</span>
     </div>
 </div>
 
 <!-- Container (Web to Lead Form) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
     <h3 class="w3-center">SIGN UP FOR MORE INFO</h3>
+    <!-- Web to Lead Form -->
+    <form class="web-to-lead" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+        <input type=hidden name="oid" value="00D3t0000040tBg">
+        <input type=hidden name="retURL" value="https://wm.com">
+            <label for="first_name">First Name</label><input  id="first_name" maxlength="40" name="first_name" size="20" type="text" />
+            <label for="last_name">Last Name</label><input  id="last_name" maxlength="80" name="last_name" size="20" type="text" />
+            <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" />
+            <label for="company">Company</label><input  id="company" maxlength="40" name="company" size="20" type="text" />
+            <label for="city">City</label><input  id="city" maxlength="40" name="city" size="20" type="text" />
+            <label for="state">State/Province</label><input  id="state" maxlength="20" name="state" size="20" type="text" />
+    <input type="submit" name="submit">
+    </form>
     
   </div>
 
